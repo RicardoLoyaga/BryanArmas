@@ -21,7 +21,21 @@ namespace BryanArmas
         {
             string usuario = txtUser.Text;
             string contrasena = txtPass.Text;
-            await Navigation.PushAsync(new VistaNotas(usuario, contrasena));
+            if (!string.IsNullOrEmpty(usuario) && !string.IsNullOrEmpty(contrasena))
+            {
+                if (usuario == "estudiante2022" && contrasena == "uisrael2022")
+                {
+                    await Navigation.PushAsync(new VistaNotas(usuario, contrasena));
+                }
+                else
+                {
+                    await DisplayAlert("Alerta! ", "Usuario/Contraseña incorrecta", "OK");
+                }
+            }
+            else
+            {
+                await DisplayAlert("Alerta! ", "Usuario/Contraseña no puede ser vacia", "OK");
+            }
         }
     }
 }

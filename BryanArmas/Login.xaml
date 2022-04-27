@@ -4,10 +4,7 @@
              x:Class="BryanArmas.Login">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Image/>
+            
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -15,12 +12,15 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Label Text="Usuario: " Grid.Row="0" />
-                <Entry x:Name="txtUser" Grid.Row="1"/>
-                <Label Text="Contraseña: " Grid.Row="2" />
-                <Entry x:Name="txtPass" Grid.Row="3" IsPassword="True"/>
-                <Button x:Name="btnLogin" BackgroundColor="Green" Grid.Row="4" Clicked="btnLogin_Clicked"/>
+                <Image Source="logo.png" Scale="1" Grid.Row="0"/>
+                <Label Text="Usuario: " Grid.Row="1" />
+                <Entry x:Name="txtUser" Grid.Row="2"/>
+                <Label Text="Contraseña: " Grid.Row="3" />
+                <Entry x:Name="txtPass" Grid.Row="4" IsPassword="True"/>
+                <Button x:Name="btnLogin" BackgroundColor="Green" Grid.Row="5" Clicked="btnLogin_Clicked" Text="LOGIN" 
+                        TextColor="White" CornerRadius="18"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
