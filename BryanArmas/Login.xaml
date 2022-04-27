@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BryanArmas.Login">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Image/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Text="Usuario: " Grid.Row="0" />
+                <Entry x:Name="txtUser" Grid.Row="1"/>
+                <Label Text="Contraseña: " Grid.Row="2" />
+                <Entry x:Name="txtPass" Grid.Row="3" IsPassword="True"/>
+                <Button x:Name="btnLogin" BackgroundColor="Green" Grid.Row="4" Clicked="btnLogin_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

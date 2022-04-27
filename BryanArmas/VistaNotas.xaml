@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BryanArmas.VistaNotas">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lblUser"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Nota Seguimiento: " Grid.Column="0" TextColor="DarkBlue"/>
+                <Entry x:Name="txtNotaSeguimiento1" Grid.Column="1" Keyboard="Numeric"/>
+                <Label Text="Nota Exámen: " Grid.Column="0" Grid.Row="1" TextColor="DarkBlue"/>
+                <Entry x:Name="txtNotaExamen1" Grid.Column="1" Grid.Row="1" Keyboard="Numeric"/>
+                <Label Text="Nota Parcial: " Grid.Column="0" Grid.Row="2" TextColor="DarkRed"/>
+                <Entry x:Name="txtParcial1" IsReadOnly="True" Grid.Column="1" Grid.Row="2"/>
+
+                <Label Text="Nota Seguimiento: " Grid.Column="0" Grid.Row="3" TextColor="DarkBlue"/>
+                <Entry x:Name="txtNotaSeguimiento2" Grid.Column="1" Grid.Row="3" Keyboard="Numeric"/>
+                <Label Text="Nota Exámen: " Grid.Column="0" Grid.Row="4" TextColor="DarkBlue"/>
+                <Entry x:Name="txtNotaExamen2" Grid.Column="1" Grid.Row="4" Keyboard="Numeric"/>
+                <Label Text="Nota Parcial: " Grid.Column="0" Grid.Row="5" TextColor="DarkRed"/>
+                <Entry x:Name="txtParcial2" IsReadOnly="True" Grid.Column="1" Grid.Row="5"/>
+                <Button x:Name="btnCalcular" Text="Calcular" Grid.Row="6" Grid.ColumnSpan="2" BackgroundColor="Green" TextColor="Wheat" Clicked="btnCalcular_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
